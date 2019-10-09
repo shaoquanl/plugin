@@ -12,7 +12,7 @@ module.exports = [
   {
     type: 'input',
     name: 'target',
-    message: '请输入你仓库的 http 地址',
+    message: '请输入主仓库的 http 地址',
     validate (val) {
       return !!val.trim()
     }
