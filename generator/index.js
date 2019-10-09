@@ -10,6 +10,7 @@ const getRepoName = str => {
 }
 
 const downloadGit = (target) => new Promise((resolve, reject) => {
+  console.log(`⬇️ 下载模版中...`)
   const root = path.resolve(process.cwd(), 'tmp')
 
   try {
@@ -22,6 +23,7 @@ const downloadGit = (target) => new Promise((resolve, reject) => {
   fs.readdirSync(path.resolve(root, repoName)).forEach(file => {
     execSync(`mv ./${file} ../`, { cwd: path.resolve(root, repoName) })
   })
+  console.log(`✅ 模版下载完成`)
   resolve()
 })
 
