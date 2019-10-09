@@ -13,7 +13,7 @@ const downloadGit = (target) => new Promise((resolve, reject) => {
   const root = path.resolve(process.cwd(), 'tmp')
 
   try {
-    execSync(`mkdir tmp`)
+    execSync(`mkdir -p tmp`)
   } catch (e) {
     // exist
   }
